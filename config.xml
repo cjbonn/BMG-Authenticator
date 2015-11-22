@@ -1,5 +1,5 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.blankmediagames.auth" version="1.0.0">
-	<name>BMG-Authenticator</name>
+	<name>BMG Authenticator</name>
 	<description>Interface to assist in BMG security.</description>
 	<author href="http://www.blankmediagames.com/" email="cjbonn2005@hotmail.com">Christopher Bonnell</author>
 	<content src="index.html"/>
