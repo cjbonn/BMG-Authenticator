@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<script type="text/javascript" src="cordova.js"></script>
 		<script src='./js/jquery.min.js'></script>
+		<script src='./js/jquery-ui.min.js'></script>
 		<script src='./js/Auth.js'></script>
 		<script src='./js/main.js'></script>
 		<title>BMG Authenticator</title>
@@ -17,8 +18,54 @@
 	<body>
 		<div id='container'>
 			<header><span>Blank Media Games</span></header>
+			<div id='loader'>
+				<img src='./images/loadingCircle.gif' style='width: 20px;height:20px;vertical-align:bottom;' /> <span>Loading...</span>
+			</div>
 			<div id='content'>
-				<img src='./images/loadingCircle.gif' style='width: 20px;height:20px;vertical-align:bottom;' /> <span>Checking Device...</span>
+				<div id='newUserContent'>
+					<span class='heading'>Welcome!</span>
+					<span class='heading3'>You need to register your device.</span>
+					<ul class='form'>
+						<li>
+							<fieldset>
+								<legend>Username</legend>
+								<input type="text" maxlength="20" id='username'>
+								<span>Enter your <i>forum</i> username here</span>
+							</fieldset>
+						</li>
+						<li>
+							<fieldset>
+								<legend>PIN</legend>
+								<input type="text" style='margin: 0 auto; width: 51px; text-align: center; text-indent: -1px;' maxlength="4" id='pin'>
+								<span>Enter a unique 4-digit PIN</span>
+							</fieldset>
+						</li>
+						<li>
+							<fieldset>
+								<legend>Important</legend>
+								<span>You will be using your PIN to prefix the security code you use in authentications.<br />Ex: XXXXYYYYYYYYY</span>
+							</fieldset>
+						</li>
+						<li>
+							<span class='menuBtn' id='newUserSubmit'>
+								<img src='./images/icon_user.png'> Register
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div id='keyContent'>
+					<span class='heading'>Welcome, <span id='userFill'></span>!</span>
+					<span class='heading3'>Key will expire after <span id='seconds'>20</span> seconds.</span>
+					<ul class='form'>
+						<li>
+							<fieldset>
+								<legend>Secure Key</legend>
+								<input type="text" maxlength="8" id='key' readonly='true'>
+								<span>Use this key along with your PIN.</span>
+							</fieldset>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div id='version'>Version: <span></span></div>
 		</div>
