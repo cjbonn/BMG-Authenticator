@@ -26,6 +26,7 @@ $.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
 // });
 
 $(document).on('deviceready',function(){
+	navigator.splashscreen.hide();
 	window.isSubmitting = false;
 	window.uuid = 1234;
 	if(typeof device !== 'undefined'){
