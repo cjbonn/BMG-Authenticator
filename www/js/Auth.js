@@ -4,7 +4,7 @@
 		var _self = this;
 		var currentFrame = '#loginFrame';
 		var lastFrame = '#loginFrame';
-		var server = "http://bmg.x10host.com/";
+		var server = "http://bmg.syncstudios.net/";
 		var currentVersion = "1.0";
 		var frameWidth = 0;
 
